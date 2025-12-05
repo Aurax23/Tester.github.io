@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .team-hero {
+            background: var(--darker-bg) url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            background-blend-mode: multiply;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .team-member {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .team-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .team-info {
+            padding: 25px;
+        }
+        .team-name {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--text-light);
+        }
+        .team-role {
+            color: var(--accent-orange);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .team-bio {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .team-contact {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+            display: flex;
+            gap: 15px;
+        }
+        .team-contact a {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .team-contact a:hover {
+            color: var(--primary-blue);
+        }
+        .department-section {
+            margin: 80px 0;
+        }
+        .department-title {
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+        .leadership-highlight {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .leadership-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+        .leadership-quote {
+            flex: 1;
+            color: white;
+        }
+        .leadership-quote i {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .leadership-highlight {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html" class="active">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="team-hero">
+            <div class="container">
+                <h1 class="hero-title">Meet Our Expert Team</h1>
+                <p class="hero-subtitle">Industry leaders with decades of combined experience in real estate investment</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Leadership Highlight -->
+                <div class="leadership-highlight">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074&auto=format&fit=crop" alt="Michael Reynolds" class="leadership-image">
+                    <div class="leadership-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p style="font-size: 1.2rem; margin-bottom: 15px;">"Our success is built on understanding each client's unique goals and crafting investment strategies that deliver exceptional returns while managing risk. We're not just transaction-focused; we're relationship-driven."</p>
+                        <div>
+                            <div style="font-weight: 700; font-size: 1.3rem;">Michael Reynolds</div>
+                            <div style="opacity: 0.9;">CEO & Founder</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Leadership -->
+                <div class="department-section">
+                    <h2 class="department-title">Executive Leadership</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074&auto=format&fit=crop" alt="Michael Reynolds" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Michael Reynolds</div>
+                                <div class="team-role">CEO & Founder</div>
+                                <p class="team-bio">20+ years in real estate investment. Former Wall Street analyst with deep financial expertise. MBA from Wharton.</p>
+                                <div class="team-contact">
+                                    <a href="mailto:michael@asotabsicon.com"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="Sarah Chen" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Sarah Chen</div>
+                                <div class="team-role">Chief Operations Officer</div>
+                                <p class="team-bio">15 years in luxury real estate. Specializes in international transactions and portfolio management. Fluent in Mandarin.</p>
+                                <div class="team-contact">
+                                    <a href="mailto:sarah@asotabsicon.com"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" alt="David Rodriguez" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">David Rodriguez</div>
+                                <div class="team-role">Chief Investment Officer</div>
+                                <p class="team-bio">Former private equity real estate fund manager with $1B+ in closed commercial deals. CFA charterholder.</p>
+                                <div class="team-contact">
+                                    <a href="mailto:david@asotabsicon.com"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investment Team -->
+                <div class="department-section">
+                    <h2 class="department-title">Investment Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Marcus Johnson" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Marcus Johnson</div>
+                                <div class="team-role">Land Development Director</div>
+                                <p class="team-bio">Focuses on strategic land acquisitions and development projects across North America. 12 years experience.</p>
+                                <div class="team-contact">
+                                    <a href="mailto:marcus@asotabsicon.com"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" alt="Robert Kim" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Robert Kim</div>
+                                <div class="team-role">Commercial Investment Director</div>
+                                <p class="team-bio">Specializes in office, retail, and industrial properties. Previously at CBRE. 10 years experience.</p>
+                                <div class="team-contact">
+                                    <a href="mailto:robert@asotabsicon.com"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1974&auto=format&fit=crop" alt="Jessica Williams" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Jessica Williams</div>
+                                <div class="team-role">Residential Portfolio Manager</div>
+                                <p class="team-bio">Expert in luxury residential markets across major US cities. 8 years experience with focus on coastal markets.</p>
+                                <div class="team-contact">
+                                    <a href="mailto:jessica@asotabsicon.com"><i class="fas fa-envelope"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advisory Board -->
+                <div class="department-section">
+                    <h2 class="department-title">Advisory Board</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="team-info">
+                                <div class="team-name">Dr. Amanda Chen</div>
+                                <div class="team-role">Economic Advisor</div>
+                                <p class="team-bio">Professor of Real Estate Economics at Stanford University. Provides macroeconomic and market trend analysis.</p>
+                                <div class="team-contact">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="team-info">
+                                <div class="team-name">James O'Connor</div>
+                                <div class="team-role">Legal Advisor</div>
+                                <p class="team-bio">Partner at O'Connor & Associates specializing in real estate law and international transactions.</p>
+                                <div class="team-contact">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="team-info">
+                                <div class="team-name">Maria Garcia</div>
+                                <div class="team-role">Sustainability Advisor</div>
+                                <p class="team-bio">LEED Fellow with 20 years experience in sustainable building design and green certification.</p>
+                                <div class="team-contact">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Join Our Team -->
+                <div style="margin-top: 80px; text-align: center; padding: 50px; background: var(--card-bg); border-radius: 12px;">
+                    <h2 class="section-title" style="margin-bottom: 20px;">Join Our Team</h2>
+                    <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 30px;">
+                        We're always looking for talented professionals who share our passion for real estate investment and client success.
+                    </p>
+                    <a href="careers.html" class="btn btn-primary">View Career Opportunities</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

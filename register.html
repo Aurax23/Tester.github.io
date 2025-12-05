@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .register-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+            padding: 40px 20px;
+        }
+        .register-box {
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .register-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .register-header h2 {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .register-header p {
+            color: var(--text-gray);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            background: var(--dark-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        .password-input {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-gray);
+            cursor: pointer;
+        }
+        .requirements-list {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .requirements-list li {
+            margin-bottom: 5px;
+        }
+        .requirements-list .valid {
+            color: #4ade80;
+        }
+        .requirements-list .invalid {
+            color: var(--accent-orange);
+        }
+        .register-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .register-btn:hover {
+            background: var(--dark-blue);
+        }
+        .register-divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        .register-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .register-divider span {
+            background: var(--card-bg);
+            padding: 0 20px;
+            color: var(--text-gray);
+        }
+        .register-footer {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-gray);
+        }
+        .register-footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        .register-footer a:hover {
+            text-decoration: underline;
+        }
+        .account-types {
+            margin: 40px 0;
+        }
+        .account-option {
+            background: var(--dark-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .account-option:hover {
+            border-color: var(--primary-blue);
+        }
+        .account-option.selected {
+            border-color: var(--accent-orange);
+            background: rgba(255, 107, 53, 0.05);
+        }
+        .account-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .account-icon {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+        @media (max-width: 600px) {
+            .register-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="register-container">
+                    <div class="register-box">
+                        <div class="register-header">
+                            <h2>Create Your Account</h2>
+                            <p>Join our exclusive network of real estate investors and clients</p>
+                        </div>
+                        
+                        <form id="registerForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                            
+                            <!-- Account Type Selection -->
+                            <div class="account-types">
+                                <h3 style="color: var(--text-light); margin-bottom: 20px;">Account Type *</h3>
+                                
+                                <div class="account-option" onclick="selectAccountType('investor')" id="investorOption">
+                                    <div class="account-header">
+                                        <div class="account-icon"><i class="fas fa-chart-line"></i></div>
+                                        <div>
+                                            <h4 style="color: var(--text-light); margin-bottom: 5px;">Investor Account</h4>
+                                            <p style="color: var(--text-gray); font-size: 0.9rem;">Access investment properties, portfolio tools, and market analytics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="account-option" onclick="selectAccountType('buyer')" id="buyerOption">
+                                    <div class="account-header">
+                                        <div class="account-icon"><i class="fas fa-home"></i></div>
+                                        <div>
+                                            <h4 style="color: var(--text-light); margin-bottom: 5px;">Buyer Account</h4>
+                                            <p style="color: var(--text-gray); font-size: 0.9rem;">Save favorite properties, schedule viewings, and track searches</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="account-option" onclick="selectAccountType('seller')" id="sellerOption">
+                                    <div class="account-header">
+                                        <div class="account-icon"><i class="fas fa-handshake"></i></div>
+                                        <div>
+                                            <h4 style="color: var(--text-light); margin-bottom: 5px;">Seller Account</h4>
+                                            <p style="color: var(--text-gray); font-size: 0.9rem;">Track property valuation, listing status, and marketing performance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <input type="hidden" id="accountType" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password *</label>
+                                <div class="password-input">
+                                    <input type="password" id="password" class="form-control" required oninput="validatePassword()">
+                                    <button type="button" class="toggle-password" id="togglePassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <ul class="requirements-list" id="passwordRequirements">
+                                    <li id="reqLength" class="invalid">At least 8 characters</li>
+                                    <li id="reqUpper" class="invalid">One uppercase letter</li>
+                                    <li id="reqLower" class="invalid">One lowercase letter</li>
+                                    <li id="reqNumber" class="invalid">One number</li>
+                                    <li id="reqSpecial" class="invalid">One special character</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password *</label>
+                                <div class="password-input">
+                                    <input type="password" id="confirmPassword" class="form-control" required oninput="validatePassword()">
+                                    <button type="button" class="toggle-password" id="toggleConfirmPassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div id="passwordMatch" style="margin-top: 10px; color: var(--accent-orange); font-size: 0.9rem;"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="newsletter" checked style="margin-right: 10px;">
+                                    Receive market insights and investment opportunities
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" required style="margin-right: 10px;">
+                                    I agree to the <a href="terms.html" style="color: var(--primary-blue);">Terms of Service</a> and <a href="privacy.html" style="color: var(--primary-blue);">Privacy Policy</a> *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="register-btn">
+                                <i class="fas fa-user-plus"></i> Create Account
+                            </button>
+                            
+                            <div class="register-divider">
+                                <span>or</span>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <p style="color: var(--text-gray); margin-bottom: 20px;">Already have an account?</p>
+                                <a href="login.html" class="btn btn-outline" style="width: 100%;">
+                                    <i class="fas fa-sign-in-alt"></i> Sign In Instead
+                                </a>
+                            </div>
+                        </form>
+                        
+                        <div class="register-footer">
+                            <p>Need help? <a href="contact.html">Contact our support team</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let selectedAccountType = '';
+        
+        function selectAccountType(type) {
+            selectedAccountType = type;
+            document.getElementById('accountType').value = type;
+            
+            // Remove selected class from all options
+            document.getElementById('investorOption').classList.remove('selected');
+            document.getElementById('buyerOption').classList.remove('selected');
+            document.getElementById('sellerOption').classList.remove('selected');
+            
+            // Add selected class to clicked option
+            document.getElementById(type + 'Option').classList.add('selected');
+        }
+        
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+        
+        document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
+            const confirmInput = document.getElementById('confirmPassword');
+            const icon = this.querySelector('i');
+            
+            if (confirmInput.type === 'password') {
+                confirmInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                confirmInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+        
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate password requirements
+            const requirements = {
+                length: password.length >= 8,
+                upper: /[A-Z]/.test(password),
+                lower: /[a-z]/.test(password),
+                number: /\d/.test(password),
+                special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+            };
+            
+            // Update requirement indicators
+            document.getElementById('reqLength').className = requirements.length ? 'valid' : 'invalid';
+            document.getElementById('reqUpper').className = requirements.upper ? 'valid' : 'invalid';
+            document.getElementById('reqLower').className = requirements.lower ? 'valid' : 'invalid';
+            document.getElementById('reqNumber').className = requirements.number ? 'valid' : 'invalid';
+            document.getElementById('reqSpecial').className = requirements.special ? 'valid' : 'invalid';
+            
+            // Check if passwords match
+            const matchMessage = document.getElementById('passwordMatch');
+            if (confirmPassword) {
+                if (password === confirmPassword) {
+                    matchMessage.textContent = '✓ Passwords match';
+                    matchMessage.style.color = '#4ade80';
+                } else {
+                    matchMessage.textContent = '✗ Passwords do not match';
+                    matchMessage.style.color = 'var(--accent-orange)';
+                }
+            } else {
+                matchMessage.textContent = '';
+            }
+        }
+        
+        // Form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!selectedAccountType) {
+                alert('Please select an account type.');
+                return;
+            }
+            
+            const firstName = document.getElementById('firstName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate password match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please check and try again.');
+                return;
+            }
+            
+            // Validate password strength
+            const requirements = {
+                length: password.length >= 8,
+                upper: /[A-Z]/.test(password),
+                lower: /[a-z]/.test(password),
+                number: /\d/.test(password),
+                special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+            };
+            
+            if (!Object.values(requirements).every(req => req)) {
+                alert('Password does not meet all requirements. Please check the password criteria.');
+                return;
+            }
+            
+            // Simulate registration success
+            alert(`Thank you for registering, ${firstName}! A verification email has been sent to ${email}. Your ${selectedAccountType} account will be activated once verified.`);
+            
+            // Redirect to login after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

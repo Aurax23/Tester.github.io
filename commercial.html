@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Properties | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html" class="active">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: var(--darker-bg) url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop') no-repeat center center/cover; background-blend-mode: multiply;">
+            <div class="container">
+                <h1 class="hero-title">Commercial Real Estate</h1>
+                <p class="hero-subtitle">Office, retail, industrial, and mixed-use investment properties</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Commercial Properties</h2>
+                <p class="text-center" style="margin-bottom: 40px; color: var(--text-gray); max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Our commercial portfolio includes Class A office buildings, retail centers, industrial warehouses, and development opportunities across major markets.
+                </p>
+
+                <div class="property-grid">
+                    <!-- Commercial 1 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop" alt="Office Building">
+                            <span class="property-tag">Class A Office</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Financial Center Tower</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Downtown, Chicago, IL</p>
+                            <p class="property-price">$85,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-building"></i> 300,000 SqFt</span>
+                                <span><i class="fas fa-elevator"></i> 24 Floors</span>
+                                <span><i class="fas fa-percent"></i> 94% Occupied</span>
+                            </div>
+                            <p class="property-description" style="margin: 15px 0; color: var(--text-gray); font-size: 0.9rem;">
+                                LEED Gold certified office tower with premium amenities and transit access. Strong tenant roster with long-term leases.
+                            </p>
+                            <a href="commercial-detail.html?id=1" class="btn btn-primary btn-full-width">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Commercial 2 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Industrial Warehouse">
+                            <span class="property-tag property-tag-orange">Industrial</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Logistics Distribution Center</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Inland Empire, CA</p>
+                            <p class="property-price">$42,500,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-warehouse"></i> 500,000 SqFt</span>
+                                <span><i class="fas fa-truck"></i> 50 Dock Doors</span>
+                                <span><i class="fas fa-road"></i> Freeway Access</span>
+                            </div>
+                            <p class="property-description" style="margin: 15px 0; color: var(--text-gray); font-size: 0.9rem;">
+                                Modern logistics facility with 36' clear height, cross-dock configuration, and ample trailer parking. Triple-net lease.
+                            </p>
+                            <a href="commercial-detail.html?id=2" class="btn btn-primary btn-full-width">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Commercial 3 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" alt="Retail Center">
+                            <span class="property-tag property-tag-gray">Retail</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Suburban Retail Plaza</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Scottsdale, AZ</p>
+                            <p class="property-price">$28,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-shopping-cart"></i> 150,000 SqFt</span>
+                                <span><i class="fas fa-car"></i> 600 Parking</span>
+                                <span><i class="fas fa-store"></i> Anchor Tenant</span>
+                            </div>
+                            <p class="property-description" style="margin: 15px 0; color: var(--text-gray); font-size: 0.9rem;">
+                                Grocery-anchored retail center in affluent suburb. Strong sales per square foot with credit tenants.
+                            </p>
+                            <a href="commercial-detail.html?id=3" class="btn btn-primary btn-full-width">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investment Metrics -->
+                <div class="section" style="padding: 60px 0 0;">
+                    <h2 class="section-title">Commercial Investment Highlights</h2>
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>Strong Cap Rates</h3>
+                            <p>Our commercial properties offer competitive capitalization rates ranging from 5% to 8% across asset classes.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                            <h3>Triple-Net Leases</h3>
+                            <p>Many properties feature NNN leases with credit tenants, providing stable, predictable income streams.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-city"></i></div>
+                            <h3>Prime Locations</h3>
+                            <p>Properties located in major metropolitan areas with strong demographic and economic fundamentals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

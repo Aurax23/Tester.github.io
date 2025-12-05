@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Valley Farmland | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reuse property-detail styles with modifications */
+        .detail-header {
+            padding: 80px 0 40px;
+            background-color: var(--darker-bg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .detail-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        .detail-price {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+        .detail-location {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: var(--text-light);
+        }
+        .feature-item i {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+        .property-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .description-box h3 {
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .sidebar {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            align-self: flex-start;
+        }
+        .sidebar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+        }
+        .agent-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .agent-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        /* Land-specific styles */
+        .land-features {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        .zoning-info {
+            background: rgba(0, 102, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-blue);
+        }
+        @media (max-width: 900px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .detail-title {
+                font-size: 2rem;
+            }
+            .detail-price {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="detail-header">
+            <div class="container">
+                <p class="detail-location"><i class="fas fa-map-marker-alt"></i> Fresno County, California 93650</p>
+                <h1 class="detail-title">Central Valley Farmland</h1>
+                <p class="detail-price">$3,200,000</p>
+                <div class="feature-grid">
+                    <div class="feature-item"><i class="fas fa-ruler-combined"></i> <span>150 Acres Total</span></div>
+                    <div class="feature-item"><i class="fas fa-tint"></i> <span>Water Rights Included</span></div>
+                    <div class="feature-item"><i class="fas fa-road"></i> <span>Highway Frontage</span></div>
+                    <div class="feature-item"><i class="fas fa-sun"></i> <span>Prime Agricultural Soil</span></div>
+                    <div class="feature-item"><i class="fas fa-tractor"></i> <span>Farmable Land</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container detail-content">
+                <div class="main-details">
+                    <div class="property-gallery">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2074&auto=format&fit=crop" alt="Central Valley Farmland Aerial View">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2052&auto=format&fit=crop" alt="Farmland Soil Close-up">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop" alt="Irrigation System">
+                    </div>
+
+                    <div class="description-box">
+                        <h3>Property Description</h3>
+                        <p>This prime 150-acre agricultural parcel is located in the heart of California's Central Valley, known as one of the most productive agricultural regions in the world. The property features Class I & II soils with excellent drainage and fertility, making it ideal for a wide range of crops including almonds, pistachios, grapes, or field crops.</p>
+                        
+                        <div class="zoning-info">
+                            <h4 style="margin-bottom: 10px; color: var(--text-light);">Zoning & Development Potential</h4>
+                            <p>Zoned A-1 (Agricultural). Property has potential for conversion to vineyard, orchard development, or continued row crop production. Preliminary discussions with county planning department indicate possibility for limited residential development with proper permits.</p>
+                        </div>
+                        
+                        <h3 style="margin-top: 40px;">Key Features</h3>
+                        <ul style="color: var(--text-light); margin-bottom: 25px;">
+                            <li>150 contiguous acres with rectangular configuration</li>
+                            <li>Senior water rights with established irrigation system</li>
+                            <li>1.2 miles of Highway 99 frontage with excellent visibility</li>
+                            <li>Three existing water wells (two operational, one standby)</li>
+                            <li>Storage barn (2,400 sq.ft.) and equipment shed (1,200 sq.ft.)</li>
+                            <li>Fully fenced perimeter with gated access points</li>
+                            <li>Level topography with less than 2% slope</li>
+                        </ul>
+                        
+                        <div class="land-features">
+                            <h3 style="border-bottom: none; margin-bottom: 20px;">Soil & Water Analysis</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <h4 style="color: var(--text-light); margin-bottom: 10px;">Soil Composition</h4>
+                                    <ul style="color: var(--text-gray);">
+                                        <li>60% Hanford sandy loam</li>
+                                        <li>25% Greenfield sandy loam</li>
+                                        <li>15% Columbia silt loam</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--text-light); margin-bottom: 10px;">Water Resources</h4>
+                                    <ul style="color: var(--text-gray);">
+                                        <li>2.5 acre-feet/acre water rights</li>
+                                        <li>Central Valley Project water allocation</li>
+                                        <li>Supplemental groundwater available</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 40px;">Financial Analysis</h3>
+                        <div style="overflow-x: auto; margin-top: 20px;">
+                            <table style="width: 100%; border-collapse: collapse; color: var(--text-light);">
+                                <thead>
+                                    <tr style="background: var(--primary-blue);">
+                                        <th style="padding: 12px; text-align: left;">Use Scenario</th>
+                                        <th style="padding: 12px; text-align: left;">Estimated Yield</th>
+                                        <th style="padding: 12px; text-align: left;">Annual Revenue</th>
+                                        <th style="padding: 12px; text-align: left;">Cap Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                        <td style="padding: 12px;">Almond Orchard</td>
+                                        <td style="padding: 12px;">2,800 lbs/acre</td>
+                                        <td style="padding: 12px;">$1,050,000</td>
+                                        <td style="padding: 12px;">4.8%</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                        <td style="padding: 12px;">Vineyard</td>
+                                        <td style="padding: 12px;">6 tons/acre</td>
+                                        <td style="padding: 12px;">$900,000</td>
+                                        <td style="padding: 12px;">4.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px;">Row Crops</td>
+                                        <td style="padding: 12px;">Mixed rotation</td>
+                                        <td style="padding: 12px;">$450,000</td>
+                                        <td style="padding: 12px;">3.5%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Contact Land Specialist</h3>
+                    <div class="agent-info">
+                        <div class="agent-avatar"><i class="fas fa-user-tie"></i></div>
+                        <div>
+                            <div class="author-name">Marcus Johnson</div>
+                            <div class="author-role" style="color: var(--text-gray);">Land Development Specialist</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 15px; color: var(--text-gray);">Marcus specializes in agricultural land investments and development projects. He can provide detailed feasibility studies for this property.</p>
+                    <a href="contact.html" class="btn btn-primary btn-full-width"><i class="fas fa-envelope"></i> Email Specialist</a>
+                    <a href="tel:+15551234568" class="btn btn-outline btn-full-width" style="margin-top: 10px;"><i class="fas fa-phone"></i> Call (555) 123-4568</a>
+                    
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: var(--text-light); margin-bottom: 15px;">Property Documents</h4>
+                        <ul style="list-style: none; color: var(--text-gray);">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Soil Analysis Report</a></li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Water Rights Certificate</a></li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Topographic Survey</a></li>
+                            <li><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Financial Projections</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Similar Properties Section -->
+        <section class="section section-dark-bg">
+            <div class="container">
+                <h2 class="section-title">Similar Land Investments</h2>
+                <div class="property-grid">
+                    <a href="land-detail-2.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2052&auto=format&fit=crop" alt="Hillside Development Land">
+                            <span class="property-tag">Residential Zoned</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Hillside View Estates</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> North Austin, TX</p>
+                            <p class="property-price">$8,500,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-mountain"></i> 75 Acres</span>
+                                <span><i class="fas fa-home"></i> R-1 Zoning</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="land-detail-3.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=2070&auto=format&fit=crop" alt="Commercial Land">
+                            <span class="property-tag property-tag-orange">Commercial</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Gateway Commercial Parcel</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Phoenix, AZ</p>
+                            <p class="property-price">$12,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-road"></i> 25 Acres</span>
+                                <span><i class="fas fa-store"></i> C-3 Zoning</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="land-detail-4.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2070&auto=format&fit=crop" alt="Timber Land">
+                            <span class="property-tag property-tag-gray">Timber</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Pacific Northwest Timber</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Oregon Coast</p>
+                            <p class="property-price">$5,750,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-tree"></i> 320 Acres</span>
+                                <span><i class="fas fa-leaf"></i> Mature Forest</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

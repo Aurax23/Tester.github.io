@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Distribution Center | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .detail-header {
+            padding: 80px 0 40px;
+            background-color: var(--darker-bg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .detail-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        .detail-price {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+        .detail-location {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: var(--text-light);
+        }
+        .feature-item i {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+        .property-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .description-box h3 {
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .sidebar {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            align-self: flex-start;
+        }
+        .sidebar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+        }
+        .agent-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .agent-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .spec-item {
+            background: var(--dark-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .spec-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+        .spec-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 900px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .detail-title {
+                font-size: 2rem;
+            }
+            .detail-price {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html" class="active">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="detail-header">
+            <div class="container">
+                <p class="detail-location"><i class="fas fa-map-marker-alt"></i> 456 Logistics Way, Inland Empire, CA 92509</p>
+                <h1 class="detail-title">Logistics Distribution Center</h1>
+                <p class="detail-price">$42,500,000</p>
+                <div class="feature-grid">
+                    <div class="feature-item"><i class="fas fa-warehouse"></i> <span>Industrial Warehouse</span></div>
+                    <div class="feature-item"><i class="fas fa-ruler-combined"></i> <span>500,000 SqFt</span></div>
+                    <div class="feature-item"><i class="fas fa-truck"></i> <span>50 Dock Doors</span></div>
+                    <div class="feature-item"><i class="fas fa-road"></i> <span>Freeway Access</span></div>
+                    <div class="feature-item"><i class="fas fa-percent"></i> <span>100% Leased</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container detail-content">
+                <div class="main-details">
+                    <div class="property-gallery">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Distribution Center Exterior">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" alt="Interior Warehouse">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Loading Docks">
+                    </div>
+
+                    <div class="description-box">
+                        <h3>Property Overview</h3>
+                        <p>This state-of-the-art logistics distribution center is strategically located in the heart of the Inland Empire, the nation's premier logistics hub. The facility features 500,000 square feet of modern warehouse space with 36-foot clear heights, cross-dock configuration, and extensive trailer parking. Currently 100% leased to a Fortune 500 logistics company under a long-term triple-net lease.</p>
+                        
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-value">500K</div>
+                                <div class="spec-label">Square Feet</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">36'</div>
+                                <div class="spec-label">Clear Height</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">50</div>
+                                <div class="spec-label">Dock Doors</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">6.25%</div>
+                                <div class="spec-label">Cap Rate</div>
+                            </div>
+                        </div>
+                        
+                        <h3>Key Features</h3>
+                        <ul style="color: var(--text-light); margin-bottom: 25px;">
+                            <li>Cross-dock configuration with 50 dock-high doors</li>
+                            <li>ESFR sprinkler system and LED lighting throughout</li>
+                            <li>150 trailer parking spaces with secured yard</li>
+                            <li>56-acre site with expansion potential</li>
+                            <li>Direct access to I-10 and I-15 freeways</li>
+                            <li>Rail-served with dedicated spur line</li>
+                            <li>24/7 security with gated access</li>
+                            <li>Energy-efficient design with solar panel ready roof</li>
+                        </ul>
+                        
+                        <div style="background: rgba(255, 107, 53, 0.1); padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent-orange);">
+                            <h4 style="color: var(--text-light); margin-bottom: 10px;">Tenant Information:</h4>
+                            <p style="color: var(--text-light);">Fortune 500 logistics company with investment-grade credit rating. Current lease term: 10 years with two 5-year renewal options. Annual rent escalations of 3% compounded.</p>
+                        </div>
+                        
+                        <h3>Location Advantages</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                            <div>
+                                <h4 style="color: var(--text-light); margin-bottom: 10px;">Transportation Access</h4>
+                                <ul style="color: var(--text-gray);">
+                                    <li>1 mile to I-10 Freeway</li>
+                                    <li>3 miles to I-15 Freeway</li>
+                                    <li>40 miles to Port of Long Beach</li>
+                                    <li>25 miles to Ontario International Airport</li>
+                                    <li>Dedicated rail service via BNSF</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-light); margin-bottom: 10px;">Market Position</h4>
+                                <ul style="color: var(--text-gray);">
+                                    <li>Inland Empire vacancy rate: 1.2%</li>
+                                    <li>Annual rental growth: 8.5%</li>
+                                    <li>24 million people within 2-hour drive</li>
+                                    <li>Major e-commerce distribution hub</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 40px;">Financial Analysis</h3>
+                        <div style="overflow-x: auto; margin-top: 20px;">
+                            <table style="width: 100%; border-collapse: collapse; color: var(--text-light);">
+                                <thead>
+                                    <tr style="background: var(--primary-blue);">
+                                        <th style="padding: 12px; text-align: left;">Metric</th>
+                                        <th style="padding: 12px; text-align: left;">Value</th>
+                                        <th style="padding: 12px; text-align: left;">Market Average</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                        <td style="padding: 12px;">Purchase Price</td>
+                                        <td style="padding: 12px;">$42,500,000</td>
+                                        <td style="padding: 12px;">$85/SqFt</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                        <td style="padding: 12px;">Annual Rent</td>
+                                        <td style="padding: 12px;">$2,656,250</td>
+                                        <td style="padding: 12px;">$5.31/SqFt</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                        <td style="padding: 12px;">NOI</td>
+                                        <td style="padding: 12px;">$2,550,000</td>
+                                        <td style="padding: 12px;">95.9% of Rent</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px;">Cap Rate</td>
+                                        <td style="padding: 12px;">6.00%</td>
+                                        <td style="padding: 12px;">5.75% Market</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Contact Investment Advisor</h3>
+                    <div class="agent-info">
+                        <div class="agent-avatar"><i class="fas fa-user-tie"></i></div>
+                        <div>
+                            <div class="author-name">Robert Kim</div>
+                            <div class="author-role" style="color: var(--text-gray);">Commercial Investment Director</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 15px; color: var(--text-gray);">Robert specializes in industrial properties and logistics facilities. He can provide detailed market analysis for this investment.</p>
+                    <a href="contact.html" class="btn btn-primary btn-full-width"><i class="fas fa-envelope"></i> Email Advisor</a>
+                    <a href="tel:+15551234570" class="btn btn-outline btn-full-width" style="margin-top: 10px;"><i class="fas fa-phone"></i> Call (555) 123-4570</a>
+                    
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: var(--text-light); margin-bottom: 15px;">Investment Documents</h4>
+                        <ul style="list-style: none; color: var(--text-gray);">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Lease Agreement</a></li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Financial Analysis</a></li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Property Inspection</a></li>
+                            <li><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Market Study</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 15px; background: rgba(0, 102, 255, 0.1); border-radius: 8px;">
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Investment Highlights</h4>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">
+                            • Credit tenant with 10-year lease<br>
+                            • Triple-net lease structure<br>
+                            • Below-market rent with upside<br>
+                            • Prime logistics location<br>
+                            • Expansion land available
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Similar Commercial Properties -->
+        <section class="section section-dark-bg">
+            <div class="container">
+                <h2 class="section-title">Similar Industrial Investments</h2>
+                <div class="property-grid">
+                    <a href="commercial-detail.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop" alt="Office Building">
+                            <span class="property-tag">Class A Office</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Financial Center Tower</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                            <p class="property-price">$85,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-building"></i> 300,000 SqFt</span>
+                                <span><i class="fas fa-elevator"></i> 24 Floors</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="commercial-detail-3.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" alt="Retail Center">
+                            <span class="property-tag property-tag-gray">Retail</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Suburban Retail Plaza</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Scottsdale, AZ</p>
+                            <p class="property-price">$28,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-shopping-cart"></i> 150,000 SqFt</span>
+                                <span><i class="fas fa-car"></i> 600 Parking</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="commercial-detail-4.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" alt="Medical Office">
+                            <span class="property-tag">Medical</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Medical Office Building</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Houston, TX</p>
+                            <p class="property-price">$32,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-hospital"></i> 120,000 SqFt</span>
+                                <span><i class="fas fa-user-md"></i> Anchor Tenant</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

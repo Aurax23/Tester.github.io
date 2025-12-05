@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying Services | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .buying-hero {
+            background: var(--darker-bg) url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop') no-repeat center center/cover;
+            background-blend-mode: multiply;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            margin-bottom: 15px;
+        }
+        .buyer-types {
+            margin: 60px 0;
+        }
+        .buyer-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-blue);
+        }
+        .buyer-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .buyer-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+        }
+        .calculator {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .calc-result {
+            background: var(--dark-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin: 15px 0;
+        }
+        @media (max-width: 900px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="buying.html" class="active">Buying</a></li>
+                    <li><a href="selling.html">Selling</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="buying-hero">
+            <div class="container">
+                <h1 class="hero-title">Expert Buying Services</h1>
+                <p class="hero-subtitle">Navigate your property purchase with confidence and strategic advantage</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Buying Process -->
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="section-title">Our Comprehensive Buying Process</h2>
+                    <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 40px;">
+                        We guide you through every step of the purchasing journey, from initial consultation to closing and beyond.
+                    </p>
+                    
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-icon"><i class="fas fa-search"></i></div>
+                            <h3>Strategy & Search</h3>
+                            <p>Define investment criteria and identify suitable properties through our exclusive network.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>Analysis & Due Diligence</h3>
+                            <p>Comprehensive financial analysis, property inspections, and market research.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Negotiation & Offer</h3>
+                            <p>Strategic negotiation to secure the best possible terms and purchase price.</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-icon"><i class="fas fa-file-contract"></i></div>
+                            <h3>Closing & Transition</h3>
+                            <p>Manage all documentation, financing coordination, and smooth property transition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buyer Types -->
+                <div class="buyer-types">
+                    <h2 class="section-title">Services for Every Buyer</h2>
+                    
+                    <div class="buyer-card">
+                        <div class="buyer-header">
+                            <div class="buyer-icon"><i class="fas fa-home"></i></div>
+                            <div>
+                                <h3 style="color: var(--text-light); margin-bottom: 5px;">First-Time Home Buyers</h3>
+                                <p style="color: var(--text-gray);">Guidance through the entire process with educational support</p>
+                            </div>
+                        </div>
+                        <ul style="color: var(--text-light); margin-left: 20px;">
+                            <li>Pre-approval assistance with preferred lenders</li>
+                            <li>Neighborhood and school district analysis</li>
+                            <li>First-time buyer incentive guidance</li>
+                            <li>Closing cost estimation and negotiation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="buyer-card">
+                        <div class="buyer-header">
+                            <div class="buyer-icon"><i class="fas fa-building"></i></div>
+                            <div>
+                                <h3 style="color: var(--text-light); margin-bottom: 5px;">Luxury Property Buyers</h3>
+                                <p style="color: var(--text-gray);">Discreet service for high-value residential acquisitions</p>
+                            </div>
+                        </div>
+                        <ul style="color: var(--text-light); margin-left: 20px;">
+                            <li>Access to off-market luxury properties</li>
+                            <li>Privacy and confidentiality protocols</li>
+                            <li>International buyer assistance</li>
+                            <li>Lifestyle and amenity matching</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="buyer-card">
+                        <div class="buyer-header">
+                            <div class="buyer-icon"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h3 style="color: var(--text-light); margin-bottom: 5px;">Investment Buyers</h3>
+                                <p style="color: var(--text-gray);">Strategic acquisition services for portfolio growth</p>
+                            </div>
+                        </div>
+                        <ul style="color: var(--text-light); margin-left: 20px;">
+                            <li>Cash flow analysis and ROI projections</li>
+                            <li>1031 exchange coordination</li>
+                            <li>Portfolio diversification strategies</li>
+                            <li>Property management referrals</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="buyer-card">
+                        <div class="buyer-header">
+                            <div class="buyer-icon"><i class="fas fa-city"></i></div>
+                            <div>
+                                <h3 style="color: var(--text-light); margin-bottom: 5px;">Commercial Investors</h3>
+                                <p style="color: var(--text-gray);">Specialized services for commercial property acquisition</p>
+                            </div>
+                        </div>
+                        <ul style="color: var(--text-light); margin-left: 20px;">
+                            <li>Market analysis and demographic studies</li>
+                            <li>Tenant due diligence and lease review</li>
+                            <li>Zoning and development potential assessment</li>
+                            <li>Financing structuring for commercial properties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Affordability Calculator -->
+                <div class="calculator">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Affordability Calculator</h2>
+                    <p style="color: var(--text-gray); margin-bottom: 30px;">
+                        Estimate how much property you can afford based on your financial situation.
+                    </p>
+                    
+                    <div class="calc-grid">
+                        <div>
+                            <div class="form-group">
+                                <label for="annualIncome">Annual Household Income ($)</label>
+                                <input type="number" id="annualIncome" class="form-control" value="150000" min="0" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="downPayment">Down Payment ($)</label>
+                                <input type="number" id="downPayment" class="form-control" value="100000" min="0" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthlyDebt">Monthly Debt Payments ($)</label>
+                                <input type="number" id="monthlyDebt" class="form-control" value="1000" min="0" step="100">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interestRate">Interest Rate (%)</label>
+                                <input type="number" id="interestRate" class="form-control" value="6.5" min="1" max="20" step="0.1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loanTerm">Loan Term (years)</label>
+                                <select id="loanTerm" class="form-control">
+                                    <option value="15">15 years</option>
+                                    <option value="30" selected>30 years</option>
+                                </select>
+                            </div>
+                            
+                            <button onclick="calculateAffordability()" class="btn btn-primary">Calculate</button>
+                        </div>
+                        
+                        <div class="calc-result">
+                            <h3 style="color: var(--text-light); margin-bottom: 20px;">Estimated Affordability</h3>
+                            <div class="result-value" id="maxPrice">$0</div>
+                            <p style="color: var(--text-gray); margin-bottom: 20px;">Maximum Purchase Price</p>
+                            
+                            <div style="text-align: left; color: var(--text-light);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>Estimated Monthly Payment:</span>
+                                    <span id="monthlyPayment">$0</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>Down Payment:</span>
+                                    <span id="calcDownPayment">$0</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Loan Amount:</span>
+                                    <span id="loanAmount">$0</span>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 30px; padding: 15px; background: rgba(255, 107, 53, 0.1); border-radius: 6px;">
+                                <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
+                                    <strong>Note:</strong> This is an estimate only. Contact us for a personalized consultation and pre-approval.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Steps -->
+                <div style="text-align: center; margin-top: 80px; padding: 50px; background: var(--card-bg); border-radius: 12px;">
+                    <h2 class="section-title" style="margin-bottom: 20px;">Ready to Start Your Search?</h2>
+                    <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 30px;">
+                        Schedule a consultation with one of our buying specialists to discuss your goals and develop a customized acquisition strategy.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="consultation.html" class="btn btn-primary">Schedule Consultation</a>
+                        <a href="properties.html" class="btn btn-outline">Browse Properties</a>
+                        <a href="contact.html" class="btn btn-outline">Contact Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function calculateAffordability() {
+            // Get input values
+            const annualIncome = parseFloat(document.getElementById('annualIncome').value) || 0;
+            const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
+            const monthlyDebt = parseFloat(document.getElementById('monthlyDebt').value) || 0;
+            const interestRate = parseFloat(document.getElementById('interestRate').value) || 0;
+            const loanTerm = parseInt(document.getElementById('loanTerm').value) || 30;
+            
+            // Standard affordability calculation (28/36 rule)
+            const monthlyIncome = annualIncome / 12;
+            const maxHousingPayment = monthlyIncome * 0.28;
+            const maxTotalDebt = monthlyIncome * 0.36;
+            const availableForMortgage = Math.min(maxHousingPayment, maxTotalDebt - monthlyDebt);
+            
+            // Calculate loan amount based on available payment
+            const monthlyRate = interestRate / 100 / 12;
+            const totalPayments = loanTerm * 12;
+            
+            // Formula: M = P * [r(1+r)^n] / [(1+r)^n - 1]
+            // Solving for P: P = M * [(1+r)^n - 1] / [r(1+r)^n]
+            const numerator = availableForMortgage * (Math.pow(1 + monthlyRate, totalPayments) - 1);
+            const denominator = monthlyRate * Math.pow(1 + monthlyRate, totalPayments);
+            const loanAmount = numerator / denominator;
+            
+            // Calculate maximum purchase price
+            const maxPurchasePrice = loanAmount + downPayment;
+            
+            // Calculate actual monthly payment for display
+            const actualMonthlyPayment = availableForMortgage;
+            
+            // Update display
+            document.getElementById('maxPrice').textContent = '$' + maxPurchasePrice.toLocaleString(undefined, {maximumFractionDigits: 0});
+            document.getElementById('monthlyPayment').textContent = '$' + actualMonthlyPayment.toLocaleString(undefined, {maximumFractionDigits: 0});
+            document.getElementById('calcDownPayment').textContent = '$' + downPayment.toLocaleString(undefined, {maximumFractionDigits: 0});
+            document.getElementById('loanAmount').textContent = '$' + loanAmount.toLocaleString(undefined, {maximumFractionDigits: 0});
+        }
+        
+        // Initialize calculator on page load
+        document.addEventListener('DOMContentLoaded', calculateAffordability);
+        
+        // Recalculate when inputs change
+        ['annualIncome', 'downPayment', 'monthlyDebt', 'interestRate', 'loanTerm'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateAffordability);
+        });
+    </script>
+</body>
+</html>

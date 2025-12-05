@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Center Tower | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reuse property-detail styles with commercial modifications */
+        .detail-header {
+            padding: 80px 0 40px;
+            background-color: var(--darker-bg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .detail-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        .detail-price {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+        .detail-location {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: var(--text-light);
+        }
+        .feature-item i {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+        .property-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .description-box h3 {
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .sidebar {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            align-self: flex-start;
+        }
+        .sidebar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+        }
+        .agent-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .agent-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        /* Commercial-specific styles */
+        .financial-metrics {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .metric-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark-bg);
+            border-radius: 8px;
+        }
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+        .metric-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .tenant-mix {
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .detail-title {
+                font-size: 2rem;
+            }
+            .detail-price {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html" class="active">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="detail-header">
+            <div class="container">
+                <p class="detail-location"><i class="fas fa-map-marker-alt"></i> 200 West Madison Street, Chicago, IL 60606</p>
+                <h1 class="detail-title">Financial Center Tower</h1>
+                <p class="detail-price">$85,000,000</p>
+                <div class="feature-grid">
+                    <div class="feature-item"><i class="fas fa-building"></i> <span>Class A Office</span></div>
+                    <div class="feature-item"><i class="fas fa-ruler-combined"></i> <span>300,000 SqFt</span></div>
+                    <div class="feature-item"><i class="fas fa-elevator"></i> <span>24 Floors</span></div>
+                    <div class="feature-item"><i class="fas fa-percent"></i> <span>94% Occupied</span></div>
+                    <div class="feature-item"><i class="fas fa-award"></i> <span>LEED Gold Certified</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container detail-content">
+                <div class="main-details">
+                    <div class="property-gallery">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop" alt="Financial Center Tower Exterior">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Office Building Lobby">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" alt="Modern Office Interior">
+                    </div>
+
+                    <div class="description-box">
+                        <h3>Property Overview</h3>
+                        <p>Financial Center Tower is a premier Class A office building located in the heart of Chicago's Central Loop. Completed in 2018, this 24-story tower offers 300,000 square feet of premium office space with panoramic views of the Chicago River and downtown skyline. The property features state-of-the-art amenities and has achieved LEED Gold certification for sustainability.</p>
+                        
+                        <div class="financial-metrics">
+                            <h3 style="border-bottom: none; margin-bottom: 20px;">Financial Highlights</h3>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <div class="metric-value">5.75%</div>
+                                    <div class="metric-label">Cap Rate</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">94%</div>
+                                    <div class="metric-label">Occupancy</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">$68</div>
+                                    <div class="metric-label">Price/SqFt</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">7.2%</div>
+                                    <div class="metric-label">NOI Growth</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Key Features & Amenities</h3>
+                        <ul style="color: var(--text-light); margin-bottom: 25px;">
+                            <li>24-hour security and concierge services</li>
+                            <li>2-level underground parking (300 spaces)</li>
+                            <li>Modern fitness center with locker rooms</li>
+                            <li>Conference center with telepresence facilities</li>
+                            <li>On-site dining options and café</li>
+                            <li>Bicycle storage and changing facilities</li>
+                            <li>Direct access to public transportation</li>
+                            <li>Fiber-optic internet connectivity</li>
+                        </ul>
+                        
+                        <div class="tenant-mix">
+                            <h3>Major Tenants</h3>
+                            <div style="overflow-x: auto; margin-top: 20px;">
+                                <table style="width: 100%; border-collapse: collapse; color: var(--text-light);">
+                                    <thead>
+                                        <tr style="background: var(--primary-blue);">
+                                            <th style="padding: 12px; text-align: left;">Tenant</th>
+                                            <th style="padding: 12px; text-align: left;">Industry</th>
+                                            <th style="padding: 12px; text-align: left;">Floor(s)</th>
+                                            <th style="padding: 12px; text-align: left;">Lease Expiration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                            <td style="padding: 12px;">Global Financial Partners</td>
+                                            <td style="padding: 12px;">Financial Services</td>
+                                            <td style="padding: 12px;">15-18</td>
+                                            <td style="padding: 12px;">2030</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                            <td style="padding: 12px;">Tech Innovations Inc.</td>
+                                            <td style="padding: 12px;">Technology</td>
+                                            <td style="padding: 12px;">10-14</td>
+                                            <td style="padding: 12px;">2028</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                            <td style="padding: 12px;">Legal Associates LLP</td>
+                                            <td style="padding: 12px;">Legal Services</td>
+                                            <td style="padding: 12px;">7-9</td>
+                                            <td style="padding: 12px;">2029</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px;">Consulting Solutions Group</td>
+                                            <td style="padding: 12px;">Consulting</td>
+                                            <td style="padding: 12px;">4-6</td>
+                                            <td style="padding: 12px;">2027</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 40px;">Investment Highlights</h3>
+                        <div style="background: rgba(255, 107, 53, 0.1); padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent-orange);">
+                            <ul style="color: var(--text-light);">
+                                <li>Strong credit tenant roster with average lease term of 7.2 years</li>
+                                <li>Annual rent escalations of 3% built into all major leases</li>
+                                <li>Below-market rents provide upside potential upon lease renewal</li>
+                                <li>Recent capital improvements ($5M) completed in 2022</li>
+                                <li>Prime location in Chicago's strongest office submarket</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Contact Investment Advisor</h3>
+                    <div class="agent-info">
+                        <div class="agent-avatar"><i class="fas fa-user-tie"></i></div>
+                        <div>
+                            <div class="author-name">David Rodriguez</div>
+                            <div class="author-role" style="color: var(--text-gray);">Head of Investments</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 15px; color: var(--text-gray);">David specializes in commercial real estate investments and REIT acquisitions. He can provide detailed financial modeling for this property.</p>
+                    <a href="contact.html" class="btn btn-primary btn-full-width"><i class="fas fa-envelope"></i> Email Advisor</a>
+                    <a href="tel:+15551234569" class="btn btn-outline btn-full-width" style="margin-top: 10px;"><i class="fas fa-phone"></i> Call (555) 123-4569</a>
+                    
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: var(--text-light); margin-bottom: 15px;">Investment Documents</h4>
+                        <ul style="list-style: none; color: var(--text-gray);">
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Financial Analysis</a></li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Tenant Roll Summary</a></li>
+                            <li style="margin-bottom: 10px;"><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Property Inspection Report</a></li>
+                            <li><i class="fas fa-file-pdf" style="color: var(--accent-orange); margin-right: 10px;"></i> <a href="#" style="color: var(--text-gray); text-decoration: none;">Market Analysis</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 15px; background: rgba(0, 102, 255, 0.1); border-radius: 8px;">
+                        <h4 style="color: var(--text-light); margin-bottom: 10px;">Investment Timeline</h4>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">Due diligence period: 60 days<br>
+                        Expected closing: Q2 2024<br>
+                        Financing available: 65% LTV</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Similar Commercial Properties -->
+        <section class="section section-dark-bg">
+            <div class="container">
+                <h2 class="section-title">Similar Commercial Investments</h2>
+                <div class="property-grid">
+                    <a href="commercial-detail-2.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Industrial Warehouse">
+                            <span class="property-tag property-tag-orange">Industrial</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Logistics Distribution Center</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Inland Empire, CA</p>
+                            <p class="property-price">$42,500,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-warehouse"></i> 500,000 SqFt</span>
+                                <span><i class="fas fa-truck"></i> 50 Dock Doors</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="commercial-detail-3.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" alt="Retail Center">
+                            <span class="property-tag property-tag-gray">Retail</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Suburban Retail Plaza</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Scottsdale, AZ</p>
+                            <p class="property-price">$28,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-shopping-cart"></i> 150,000 SqFt</span>
+                                <span><i class="fas fa-car"></i> 600 Parking</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="commercial-detail-4.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" alt="Medical Office">
+                            <span class="property-tag">Medical</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Medical Office Building</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Houston, TX</p>
+                            <p class="property-price">$32,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-hospital"></i> 120,000 SqFt</span>
+                                <span><i class="fas fa-user-md"></i> Anchor Tenant</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

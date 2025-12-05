@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 12px;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .team-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .team-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .team-info {
+            padding: 20px;
+        }
+        .team-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        .team-role {
+            color: var(--accent-orange);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .team-bio {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: var(--darker-bg) url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover; background-blend-mode: multiply;">
+            <div class="container">
+                <h1 class="hero-title">Our Story & Mission</h1>
+                <p class="hero-subtitle">Building wealth through strategic real estate investments since 2005</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Company Overview -->
+                <div class="about-snapshot-grid">
+                    <div>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Who We Are</h2>
+                        <p class="lead-paragraph">
+                            Asotabsicon Real Estate is a premier investment firm specializing in luxury residential properties, commercial real estate, and strategic land acquisitions. Founded in 2005, we have grown to become one of the most trusted names in high-value real estate transactions.
+                        </p>
+                        <p style="margin-bottom: 20px; color: var(--text-light);">
+                            Our team of experienced professionals combines deep market knowledge with innovative investment strategies to deliver exceptional returns for our clients. We operate across major markets in North America, Europe, and Asia, maintaining a global perspective on real estate opportunities.
+                        </p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check-circle"></i> Over $2.5 billion in closed transactions</li>
+                            <li><i class="fas fa-check-circle"></i> 18 years of industry expertise</li>
+                            <li><i class="fas fa-check-circle"></i> Global network of partners and clients</li>
+                            <li><i class="fas fa-check-circle"></i> Proprietary market analysis tools</li>
+                        </ul>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Our Office" class="about-image">
+                    </div>
+                </div>
+
+                <!-- Company Stats -->
+                <div style="margin: 80px 0;">
+                    <h2 class="section-title">By The Numbers</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">18+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">$2.5B+</div>
+                            <div class="stat-label">Total Transactions</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Values -->
+                <div style="margin: 80px 0;">
+                    <h2 class="section-title">Our Core Values</h2>
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Integrity</h3>
+                            <p>We maintain the highest ethical standards in all our transactions, ensuring transparency and honesty with every client.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Innovation</h3>
+                            <p>Leveraging technology and data analytics to identify emerging opportunities and optimize investment strategies.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Client Focus</h3>
+                            <p>Building long-term relationships by understanding and prioritizing our clients' unique goals and needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Team -->
+                <div style="margin: 80px 0;">
+                    <h2 class="section-title">Leadership Team</h2>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074&auto=format&fit=crop" alt="CEO" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Michael Reynolds</div>
+                                <div class="team-role">CEO & Founder</div>
+                                <p class="team-bio">20+ years in real estate investment. Former Wall Street analyst with deep financial expertise.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="COO" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">Sarah Chen</div>
+                                <div class="team-role">Chief Operations Officer</div>
+                                <p class="team-bio">15 years in luxury real estate. Specializes in international transactions and portfolio management.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" alt="Head of Investments" class="team-image">
+                            <div class="team-info">
+                                <div class="team-name">David Rodriguez</div>
+                                <div class="team-role">Head of Investments</div>
+                                <p class="team-bio">Former private equity real estate fund manager with $1B+ in closed commercial deals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

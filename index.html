@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asotabsicon | Premium Real Estate & Land Investments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: var(--darker-bg) url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop') no-repeat center center/cover; background-blend-mode: multiply;">
+            <div class="container">
+                <h1 class="hero-title">Find Your Future. Invest With Confidence.</h1>
+                <p class="hero-subtitle">Specializing in luxury residential and strategic land investments worldwide.</p>
+                <div class="hero-cta-group">
+                    <a href="properties.html" class="btn btn-primary btn-large">Browse Properties</a>
+                    <a href="consultation.html" class="btn btn-outline btn-large">Book Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Properties Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Listings</h2>
+                <div class="property-grid">
+                    
+                    <!-- Property Card 1: Luxury Villa -->
+                    <a href="property-detail.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop" alt="Luxury Villa" onerror="this.onerror=null; this.src='https://placehold.co/600x400/111827/0066ff?text=Luxury+Villa';">
+                            <span class="property-tag">New Listing</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Coastal Breeze Villa</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Sunset Bay, Miami, FL</p>
+                            <p class="property-price">$4,500,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-bed"></i> 5 Beds</span>
+                                <span><i class="fas fa-bath"></i> 6 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 5,200 SqFt</span>
+                            </div>
+                            <span class="btn btn-primary btn-full-width">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Property Card 2: Commercial Office -->
+                    <a href="commercial.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop" alt="Commercial Office" onerror="this.onerror=null; this.src='https://placehold.co/600x400/111827/ff6b35?text=Commercial+Office';">
+                            <span class="property-tag property-tag-orange">Commercial</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Downtown Tech Hub Office</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Silicon Valley, CA</p>
+                            <p class="property-price">$12,800,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-chart-line"></i> 15,000 SqFt</span>
+                                <span><i class="fas fa-users"></i> Class A</span>
+                                <span><i class="fas fa-building"></i> 4 Floors</span>
+                            </div>
+                            <span class="btn btn-primary btn-full-width">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Property Card 3: Developable Land -->
+                    <a href="land.html" class="property-card" style="text-decoration: none;">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2074&auto=format&fit=crop" alt="Developable Land" onerror="this.onerror=null; this.src='https://placehold.co/600x400/111827/94a3b8?text=Developable+Land';">
+                            <span class="property-tag property-tag-gray">Investment</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">High-Growth Strategic Land</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> North Austin, TX</p>
+                            <p class="property-price">$2,100,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-tree"></i> 50 Acres</span>
+                                <span><i class="fas fa-road"></i> Zoned Multi-Use</span>
+                            </div>
+                            <span class="btn btn-primary btn-full-width">View Details</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section section-dark-bg">
+            <div class="container">
+                <h2 class="section-title">Our Expertise</h2>
+                <div class="service-grid">
+                    
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Buying & Selling</h3>
+                        <p>Expert guidance through every transaction. We maximize your investment, whether you're purchasing a home or selling a portfolio.</p>
+                        <a href="buying-selling.html" class="text-link">Learn More &rarr;</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Investment Consulting</h3>
+                        <p>Strategic advice on high-yield land acquisition and commercial property portfolio management for long-term growth.</p>
+                        <a href="consultation.html" class="text-link">Start Investing &rarr;</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-home"></i></div>
+                        <h3>Free Property Valuation</h3>
+                        <p>Get an accurate, no-obligation valuation for your residential or commercial property in today's market.</p>
+                        <a href="valuation.html" class="text-link">Request Valuation &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonial-grid">
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                        <p class="testimonial-text">"Asotabsicon secured a strategic land parcel for my development project. Their market insight was invaluable, and the closing process was seamless. True professionals."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J.L</div>
+                            <div>
+                                <div class="author-name">James Long</div>
+                                <div class="author-role">Property Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                        <p class="testimonial-text">"The team made selling our luxury condo effortless. We achieved a price far above our expectation. Highly recommend their personalized service."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A.M</div>
+                            <div>
+                                <div class="author-name">Anika Mehta</div>
+                                <div class="author-role">Private Seller</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                        <p class="testimonial-text">"Their investment consultation services transformed my portfolio. They found me stable commercial assets with excellent cap rates."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C.P</div>
+                            <div>
+                                <div class="author-name">Carlos Perez</div>
+                                <div class="author-role">Investor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer (reused for consistency) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script file for mobile menu -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Property Valuation | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .valuation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        .valuation-info {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        .valuation-benefits {
+            margin-top: 30px;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .benefit-icon {
+            color: var(--accent-orange);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        .valuation-form {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: var(--dark-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 900px) {
+            .valuation-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: var(--darker-bg) url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop') no-repeat center center/cover; background-blend-mode: multiply;">
+            <div class="container">
+                <h1 class="hero-title">Free Property Valuation</h1>
+                <p class="hero-subtitle">Get an accurate market valuation for your property in minutes</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="valuation-grid">
+                    <!-- Valuation Information -->
+                    <div class="valuation-info">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Why Get a Professional Valuation?</h2>
+                        <p style="margin-bottom: 25px; color: var(--text-light);">
+                            Our proprietary valuation model combines advanced data analytics with local market expertise to provide you with an accurate estimate of your property's current market value. Whether you're considering selling, refinancing, or simply curious about your property's worth, our free valuation service gives you the insights you need.
+                        </p>
+                        
+                        <div class="valuation-benefits">
+                            <h3 style="margin-bottom: 20px; color: var(--text-light);">What You'll Receive:</h3>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i class="fas fa-chart-line fa-lg"></i></div>
+                                <div>
+                                    <h4 style="margin-bottom: 5px; color: var(--text-light);">Comprehensive Market Analysis</h4>
+                                    <p style="color: var(--text-gray);">Comparison with recent sales and current listings in your area.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i class="fas fa-home fa-lg"></i></div>
+                                <div>
+                                    <h4 style="margin-bottom: 5px; color: var(--text-light);">Property-Specific Assessment</h4>
+                                    <p style="color: var(--text-gray);">Evaluation of your property's unique features, condition, and upgrades.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i class="fas fa-calendar-alt fa-lg"></i></div>
+                                <div>
+                                    <h4 style="margin-bottom: 5px; color: var(--text-light);">Timeline Strategy</h4>
+                                    <p style="color: var(--text-gray);">Recommendations on optimal timing based on market conditions.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i class="fas fa-file-alt fa-lg"></i></div>
+                                <div>
+                                    <h4 style="margin-bottom: 5px; color: var(--text-light);">Detailed PDF Report</h4>
+                                    <p style="color: var(--text-gray);">Professional report with supporting data and analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 40px; padding: 20px; background: rgba(0, 102, 255, 0.1); border-radius: 8px; border-left: 4px solid var(--primary-blue);">
+                            <p style="color: var(--text-light); margin-bottom: 10px;">
+                                <strong>Note:</strong> This is a preliminary valuation based on available market data. For a precise valuation suitable for legal or financial purposes, we recommend scheduling an in-person appraisal with one of our certified appraisers.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Valuation Form -->
+                    <div class="valuation-form">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Get Your Free Valuation</h2>
+                        
+                        <form id="valuationForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="propertyType">Property Type *</label>
+                                <select id="propertyType" class="form-control" required>
+                                    <option value="">Select property type</option>
+                                    <option value="single-family">Single Family Home</option>
+                                    <option value="condo">Condo/Apartment</option>
+                                    <option value="townhouse">Townhouse</option>
+                                    <option value="multi-family">Multi-Family (2-4 units)</option>
+                                    <option value="commercial">Commercial Property</option>
+                                    <option value="land">Vacant Land</option>
+                                    <option value="luxury">Luxury Estate</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bedrooms">Bedrooms</label>
+                                    <select id="bedrooms" class="form-control">
+                                        <option value="">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5+">5+</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="bathrooms">Bathrooms</label>
+                                    <select id="bathrooms" class="form-control">
+                                        <option value="">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Property Address *</label>
+                                <input type="text" id="address" class="form-control" placeholder="Street address, city, state, ZIP" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sqft">Approximate Square Footage</label>
+                                <input type="number" id="sqft" class="form-control" placeholder="e.g., 2500">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Additional Information</label>
+                                <textarea id="message" class="form-control" placeholder="Tell us about any special features, renovations, or specific questions..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" required style="margin-right: 10px;">
+                                    I agree to receive my valuation report and relevant market updates via email. I understand this is a free service with no obligation.
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                                <i class="fas fa-calculator"></i> Get My Free Valuation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- How It Works -->
+                <div style="margin-top: 80px;">
+                    <h2 class="section-title">How Our Valuation Process Works</h2>
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <h3>1. Property Details</h3>
+                            <p>You provide basic information about your property through our secure online form.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-database"></i></div>
+                            <h3>2. Market Analysis</h3>
+                            <p>Our system analyzes recent sales, current listings, and market trends in your area.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-file-pdf"></i></div>
+                            <h3>3. Receive Report</h3>
+                            <p>You'll receive a detailed PDF valuation report within 24-48 hours via email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Valuation form submission handler
+        document.getElementById('valuationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const propertyType = document.getElementById('propertyType').value;
+            const address = document.getElementById('address').value;
+            
+            // Show success message
+            alert(`Thank you, ${firstName}! Your free ${propertyType} valuation request has been submitted for the property at "${address}". You'll receive your detailed valuation report within 24-48 hours.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

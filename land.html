@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land for Sale | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html" class="active">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: var(--darker-bg) url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2052&auto=format&fit=crop') no-repeat center center/cover; background-blend-mode: multiply;">
+            <div class="container">
+                <h1 class="hero-title">Strategic Land Investments</h1>
+                <p class="hero-subtitle">Prime development land and agricultural properties with high growth potential</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Available Land Parcels</h2>
+                <p class="text-center" style="margin-bottom: 40px; color: var(--text-gray); max-width: 800px; margin-left: auto; margin-right: auto;">
+                    We specialize in identifying and acquiring strategic land parcels for residential, commercial, and mixed-use development. Our team provides comprehensive due diligence and investment analysis.
+                </p>
+
+                <div class="property-grid">
+                    <!-- Land 1 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2074&auto=format&fit=crop" alt="Rural Development Land">
+                            <span class="property-tag property-tag-gray">Agricultural</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Central Valley Farmland</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Fresno County, CA</p>
+                            <p class="property-price">$3,200,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-tree"></i> 150 Acres</span>
+                                <span><i class="fas fa-tint"></i> Water Rights</span>
+                                <span><i class="fas fa-road"></i> Highway Access</span>
+                            </div>
+                            <p class="property-description" style="margin: 15px 0; color: var(--text-gray); font-size: 0.9rem;">
+                                Prime agricultural land with established water rights. Suitable for crop production or conversion to vineyard.
+                            </p>
+                            <a href="land-detail.html?id=1" class="btn btn-primary btn-full-width">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Land 2 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2052&auto=format&fit=crop" alt="Suburban Development Land">
+                            <span class="property-tag">Residential Zoned</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Hillside View Estates</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> North Austin, TX</p>
+                            <p class="property-price">$8,500,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-mountain"></i> 75 Acres</span>
+                                <span><i class="fas fa-home"></i> R-1 Zoning</span>
+                                <span><i class="fas fa-chart-line"></i> High Growth</span>
+                            </div>
+                            <p class="property-description" style="margin: 15px 0; color: var(--text-gray); font-size: 0.9rem;">
+                                Prime residential development land with panoramic views. Pre-approved for 200+ luxury home sites.
+                            </p>
+                            <a href="land-detail.html?id=2" class="btn btn-primary btn-full-width">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Land 3 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=2070&auto=format&fit=crop" alt="Commercial Land">
+                            <span class="property-tag property-tag-orange">Commercial</span>
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title">Gateway Commercial Parcel</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> Phoenix, AZ</p>
+                            <p class="property-price">$12,000,000</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-road"></i> 25 Acres</span>
+                                <span><i class="fas fa-store"></i> C-3 Zoning</span>
+                                <span><i class="fas fa-traffic-light"></i> Highway Frontage</span>
+                            </div>
+                            <p class="property-description" style="margin: 15px 0; color: var(--text-gray); font-size: 0.9rem;">
+                                High-traffic commercial land at major highway interchange. Ideal for retail, hotel, or mixed-use development.
+                            </p>
+                            <a href="land-detail.html?id=3" class="btn btn-primary btn-full-width">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investment Services Section -->
+                <div class="section" style="padding: 60px 0 0;">
+                    <h2 class="section-title">Land Investment Services</h2>
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-search"></i></div>
+                            <h3>Land Acquisition</h3>
+                            <p>Strategic identification and acquisition of land parcels with development potential or long-term appreciation.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                            <h3>Due Diligence</h3>
+                            <p>Comprehensive analysis including zoning, environmental, entitlement, and infrastructure assessment.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h3>Development Planning</h3>
+                            <p>Master planning and feasibility studies for residential, commercial, and mixed-use developments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

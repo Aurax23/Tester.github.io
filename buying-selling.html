@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying & Selling Services | Asotabsicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .services-hero {
+            background: var(--darker-bg) url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop') no-repeat center center/cover;
+            background-blend-mode: multiply;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+        }
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            color: var(--text-gray);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .tab-button:hover {
+            color: var(--text-light);
+        }
+        .tab-button.active {
+            color: var(--text-light);
+        }
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-blue);
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .comparison-section {
+            margin: 60px 0;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .comparison-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        .comparison-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .comparison-icon {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+        }
+        @media (max-width: 768px) {
+            .services-tabs {
+                flex-direction: column;
+            }
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span>ASOTABSICON</span>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="land.html">Land for Sale</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="buying-selling.html" class="active">Buying & Selling</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-outline">Client Login</a>
+                <a href="valuation.html" class="btn btn-primary">Free Valuation</a>
+                <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="services-hero">
+            <div class="container">
+                <h1 class="hero-title">Buying & Selling Services</h1>
+                <p class="hero-subtitle">Expert guidance for every stage of your real estate journey</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Services Tabs -->
+                <div class="services-tabs">
+                    <button class="tab-button active" onclick="showTab('buying')">
+                        <i class="fas fa-home"></i> Buying Services
+                    </button>
+                    <button class="tab-button" onclick="showTab('selling')">
+                        <i class="fas fa-handshake"></i> Selling Services
+                    </button>
+                    <button class="tab-button" onclick="showTab('dual')">
+                        <i class="fas fa-sync-alt"></i> Dual Agency
+                    </button>
+                </div>
+
+                <!-- Buying Tab -->
+                <div id="buyingTab" class="tab-content active">
+                    <h2 class="section-title">Expert Buying Services</h2>
+                    <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 40px; text-align: center;">
+                        From first-time home buyers to seasoned investors, we provide strategic guidance to help you find and acquire the perfect property.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+                            <h3>Property Search</h3>
+                            <p>Access to exclusive listings and off-market opportunities through our extensive network.</p>
+                            <a href="properties.html" class="text-link">Browse Properties &rarr;</a>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>Market Analysis</h3>
+                            <p>Comprehensive research to identify emerging opportunities and optimal purchase timing.</p>
+                            <a href="valuation.html" class="text-link">Get Market Report &rarr;</a>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Negotiation Strategy</h3>
+                            <p>Expert negotiation to secure the best possible price and terms for your purchase.</p>
+                            <a href="consultation.html" class="text-link">Schedule Consultation &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 50px;">
+                        <a href="buying.html" class="btn btn-primary">Learn More About Buying</a>
+                    </div>
+                </div>
+
+                <!-- Selling Tab -->
+                <div id="sellingTab" class="tab-content">
+                    <h2 class="section-title">Premium Selling Services</h2>
+                    <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 40px; text-align: center;">
+                        Maximize your property's value with our comprehensive marketing strategies and expert negotiation skills.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                            <h3>Strategic Marketing</h3>
+                            <p>Multi-channel marketing campaigns designed to attract qualified buyers and generate premium offers.</p>
+                            <a href="selling.html" class="text-link">View Marketing Packages &rarr;</a>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-camera"></i></div>
+                            <h3>Professional Presentation</h3>
+                            <p>High-quality photography, virtual tours, and staging to showcase your property's best features.</p>
+                            <a href="selling.html" class="text-link">See Our Portfolio &rarr;</a>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-percentage"></i></div>
+                            <h3>Pricing Strategy</h3>
+                            <p>Data-driven pricing recommendations to maximize your return while ensuring competitive positioning.</p>
+                            <a href="valuation.html" class="text-link">Get Free Valuation &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 50px;">
+                        <a href="selling.html" class="btn btn-primary">Learn More About Selling</a>
+                    </div>
+                </div>
+
+                <!-- Dual Agency Tab -->
+                <div id="dualTab" class="tab-content">
+                    <h2 class="section-title">Dual Agency Services</h2>
+                    <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 40px; text-align: center;">
+                        Streamlined transactions when we represent both buyer and seller, ensuring efficient communication and coordination.
+                    </p>
+                    
+                    <div class="comparison-section">
+                        <div class="comparison-grid">
+                            <div class="comparison-card">
+                                <div class="comparison-header">
+                                    <div class="comparison-icon"><i class="fas fa-balance-scale"></i></div>
+                                    <div>
+                                        <h3 style="color: var(--text-light);">Benefits</h3>
+                                        <p style="color: var(--text-gray);">Advantages of dual agency representation</p>
+                                    </div>
+                                </div>
+                                <ul style="color: var(--text-light);">
+                                    <li>Streamlined communication between parties</li>
+                                    <li>Reduced transaction time</li>
+                                    <li>Potential for reduced commission fees</li>
+                                    <li>Single point of contact for both sides</li>
+                                    <li>In-depth knowledge of the property</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="comparison-card">
+                                <div class="comparison-header">
+                                    <div class="comparison-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                    <div>
+                                        <h3 style="color: var(--text-light);">Considerations</h3>
+                                        <p style="color: var(--text-gray);">Important factors to consider</p>
+                                    </div>
+                                </div>
+                                <ul style="color: var(--text-light);">
+                                    <li>Limited advocacy for individual parties</li>
+                                    <li>Potential conflict of interest</li>
+                                    <li>Requires informed consent from both parties</li>
+                                    <li>May not be allowed in all states</li>
+                                    <li>Full disclosure of all material facts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(0, 102, 255, 0.1); padding: 30px; border-radius: 12px; margin-top: 40px;">
+                        <h3 style="color: var(--text-light); margin-bottom: 15px;">Our Dual Agency Policy</h3>
+                        <p style="color: var(--text-gray);">
+                            We practice disclosed dual agency with full transparency. Both parties must provide written consent, and we maintain strict confidentiality while facilitating fair negotiations. Our primary commitment is to ensure a smooth transaction that serves the best interests of all parties involved.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div style="text-align: center; margin-top: 80px; padding: 50px; background: var(--card-bg); border-radius: 12px;">
+                    <h2 class="section-title" style="margin-bottom: 20px;">Start Your Real Estate Journey Today</h2>
+                    <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 30px;">
+                        Whether you're buying, selling, or exploring investment opportunities, our team is ready to help you achieve your real estate goals.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+                        <a href="consultation.html" class="btn btn-outline">Schedule Consultation</a>
+                        <a href="properties.html" class="btn btn-outline">Browse Properties</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon"><i class="fas fa-building"></i></div>
+                        <span>ASOTABSICON</span>
+                    </a>
+                    <p>Strategic real estate and land investment specialists, helping clients build wealth and secure their future.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="land.html">Land for Sale</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="buying.html">Buying</a></li>
+                        <li><a href="selling.html">Selling</a></li>
+                        <li><a href="valuation.html">Property Valuation</a></li>
+                        <li><a href="consultation.html">Investment Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Asotabsicon Real Estate. All rights reserved.
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            
+            // Add active class to clicked tab button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
